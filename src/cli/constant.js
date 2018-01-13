@@ -148,7 +148,11 @@ const options = {
     type: "path",
     category: CATEGORY_CONFIG,
     default: ".prettierignore",
-    description: "Path to a file with patterns describing files to ignore."
+    description: dedent`
+      Path to a file with patterns describing files to ignore. Multiple paths can
+      be passed as separate \`--ignore-path\`s.
+    `,
+    array: true
   },
   "list-different": {
     type: "boolean",
